@@ -1,23 +1,21 @@
-#
-# Copyright Henrik Nymann Jensen
-#
+# Copyright 2014 Henrik Nymann Jensen
+# Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="fio benchmark and verification tool"
 DESCRIPTION="
     fio is an I/O tool meant to be used both for benchmark and stress/hardware verification.
-     It has support for 19 different types of I/O engines (sync, mmap, libaio, posixaio, SG v3, splice, null, network, syslet, guasi, solarisaio, and more)
+    It has support for 19 different types of I/O engines 
+    (sync, mmap, libaio, posixaio, SG v3, splice, null, network, syslet, guasi, solarisaio, and more)
 "
 
 HOMEPAGE="http://freecode.com/projects/fio"
 DOWNLOADS="http://brick.kernel.dk/snaps/${PNV}.tar.bz2
-LICENSE="GPL-2"
-BUGS_TO="exherbo@henriknj.dk"
+LICENSES="GPL-2"
 SLOT="0"
 PLATFORMS="~amd64 ~x86~"
 
 src_configure() {
     ./configure
-
 }
 
 src_compile() {
@@ -27,5 +25,5 @@ src_compile() {
 src_install() {
     emake install DESTDIR="${D}" prefix="/usr" mandir="/usr/share/man"
     doman fio.1
-
 }
+
