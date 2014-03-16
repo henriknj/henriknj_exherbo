@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-    emake DESTDIR="${IMAGE}" install  
+    emake DESTDIR="${IMAGE}" prefix="/usr" mandir="/usr/share/man" install  
     doman fio.1
 }
 
