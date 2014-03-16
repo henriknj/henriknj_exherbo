@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=forking
 PIDFile=/run/hostapd.pid
-ExecStart=/usr/bin/hostapd /etc/hostapd/hostapd.conf -P /run/hostapd.pid -B
+ExecStart=/usr/sbin/hostapd /etc/hostapd/hostapd.conf -P /run/hostapd.pid -B
 
 [Install]
 WantedBy=multi-user.target
