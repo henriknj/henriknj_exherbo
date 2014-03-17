@@ -7,6 +7,7 @@ DESCRIPTION="
     and lets users trace the Linux kernel dynamically.
     It's similar with Linux Systemtap and Solaris DTrace
 "
+LICENSE="GPL-2"
 BUGS_TO="exherbo@henriknj.dk"
 HOMEPAGE="http://www.ktap.org"
 DOWNLOADS="http://github.com/ktap/ktap/archive/v${PV}.tar.gz"
@@ -14,7 +15,7 @@ SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS="
     elf
-    ffi [[ description = [ Support for ffi, which enable calling kernel functions ]]]
+    ffi
 "
 
 
@@ -23,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-    emake ="${IMAGE}" prefix="/usr" mandir="/usr/share/man" install  
+    default
 }
 
