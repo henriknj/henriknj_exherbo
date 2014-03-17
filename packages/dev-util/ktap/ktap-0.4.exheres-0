@@ -7,7 +7,6 @@ DESCRIPTION="
     and lets users trace the Linux kernel dynamically.
     It's similar with Linux Systemtap and Solaris DTrace
 "
-LICENSE="GPL-2"
 BUGS_TO="exherbo@henriknj.dk"
 HOMEPAGE="http://www.ktap.org"
 DOWNLOADS="http://github.com/ktap/ktap/archive/v${PV}.tar.gz"
