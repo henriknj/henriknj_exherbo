@@ -13,6 +13,11 @@ DOWNLOADS="http://brick.kernel.dk/snaps/${PNV}.tar.bz2"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 
+DEPENDENCIES="
+    run:
+        dev-lang/python
+"
+
 src_configure() {
     ./configure
 }

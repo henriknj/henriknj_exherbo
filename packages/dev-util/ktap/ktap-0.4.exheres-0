@@ -1,0 +1,28 @@
+# Copyright 2014 Henrik Nymann Jensen
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="ktap is a new script-based dynamic tracing tool for Linux."
+DESCRIPTION="
+    ktap is a new script-based tracing tool for Linux, it uses a scripting language
+    and lets users trace the Linux kernel dynamically.
+    It's similar with Linux Systemtap and Solaris DTrace
+"
+BUGS_TO="exherbo@henriknj.dk"
+HOMEPAGE="http://www.ktap.org"
+DOWNLOADS="http://github.com/ktap/ktap/archive/v${PV}.tar.gz"
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS="
+    elf
+    ffi [[ description = [ Support for ffi, which enable calling kernel functions ]]]
+"
+
+
+src_compile() {
+    emake
+}
+
+src_install() {
+    emake ="${IMAGE}" prefix="/usr" mandir="/usr/share/man" install  
+}
+
